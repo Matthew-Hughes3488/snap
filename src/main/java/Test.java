@@ -1,9 +1,8 @@
-import Card.CardGame;
+import card.CardGame;
+import game.Snap;
 
 public class Test {
     public static void main(String[] args) {
-        CardGame cardGame = new CardGame("test");
-        cardGame.shuffleDeck();
-        cardGame.getDeck();
+        Snap snap = new Snap("game1");
     }
 }
