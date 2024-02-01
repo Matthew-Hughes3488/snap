@@ -1,18 +1,40 @@
 package Card;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class CardGame {
     private static final String[] SUITS = {"heart", "club", "diamond", "spade"};
     private static final String[] SYMBOLS = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"};
     private static final int[] VALUES = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14};
     private final String name;
-    private final List<Card> deck;
+    private List<Card> deck;
 
     public CardGame(String name){
         this.name = name;
         this.deck = initzaliseDeck();
+    }
+
+    public void getDeck(){
+        deck.forEach(card -> System.out.println(card));
+    }
+
+    public Card dealCard(){
+        return deck.remove(0);
+    }
+
+    public void sortDeckInNumberOrder(){
+        this.deck = deck.stream()
+                .sorted((a, b) -> a.getValue() - b.getValue())
+                .collect(Collectors.toList());
+    }
+
+    public void sortDeckIntoSuits(){
+        this.deck = deck.stream()
+                .sorted((a, b) -> a.getSuit().compareTo(b.getSuit()))
+                .collect(Collectors.toList());
     }
 
     private List<Card> initzaliseDeck(){

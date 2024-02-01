@@ -11,6 +11,18 @@ public class Card {
         this.value = value;
     }
 
+    public String getSuit() {
+        return suit;
+    }
+
+    public String getSymbol() {
+        return symbol;
+    }
+
+    public int getValue() {
+        return value;
+    }
+
     @Override
     public String toString() {
         return String.format("Suit: %s\nSymbol: %s\nValue: %d", suit, symbol, value);
