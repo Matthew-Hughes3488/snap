@@ -1,6 +1,7 @@
 package Card;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -35,6 +36,10 @@ public class CardGame {
         this.deck = deck.stream()
                 .sorted((a, b) -> a.getSuit().compareTo(b.getSuit()))
                 .collect(Collectors.toList());
+    }
+
+    public void shuffleDeck(){
+        Collections.shuffle(deck);
     }
 
     private List<Card> initzaliseDeck(){
