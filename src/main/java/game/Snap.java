@@ -26,7 +26,7 @@ public class Snap extends CardGame {
             SCANNER.nextLine();
             Card newCard = dealCard();
 
-            System.out.println("Your card is\n" + newCard);
+            System.out.println("Your card is\n" + newCard + "\n");
 
             if(checkIfSnap(newCard, topCard))
                 setGameOver();

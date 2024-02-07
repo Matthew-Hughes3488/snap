@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class CardGame {
-    private static final String[] SUITS = {"heart", "club", "diamond", "spade"};
+    private static final String[] SUITS = {"♥", "♣", "♦", "♠"};
     private static final String[] SYMBOLS = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"};
     private static final int[] VALUES = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14};
     private final String name;

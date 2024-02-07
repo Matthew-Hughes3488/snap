@@ -25,6 +25,6 @@ public class Card {
 
     @Override
     public String toString() {
-        return String.format("Suit: %s\nSymbol: %s\nValue: %d", suit, symbol, value);
+        return String.format("%s of %s", symbol, suit);
     }
 }
